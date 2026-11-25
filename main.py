@@ -21,12 +21,16 @@ input.
 import os
 import stat
 
-TEXT = (
-    "I delegated your deadline to a subagent named Triage. "
+# The excuse is built from three named beats, joined in order:
+# the delegation, the return with its note, and the six-hour stalemate.
+BEATS = (
+    "I delegated your deadline to a subagent named Triage. ",
     "Triage passed it to Escalation, who sent it back with a note "
-    "saying 'per your request'. We have been politely declining "
-    "each other for six hours."
+    "saying 'per your request'. ",
+    "We have been politely declining each other for six hours.",
 )
+
+TEXT = "".join(BEATS)
 
 
 def main() -> None:
